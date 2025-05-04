@@ -1,0 +1,28 @@
+.navButtons {
+  width: 13em;
+  height: 48px;
+  border-radius: 5px;
+  padding: auto;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  border: 3px solid black;
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+  margin-left:1px;
+  margin-right:1px;
+}
+
+.navButtons:hover {
+cursor: pointer;
+background: linear-gradient(
+  90deg,
+  rgb(39, 143, 255) 0%,
+  rgb(12, 99, 250) 100%
+);
+transition: all 0.4s ease-out;
+}
