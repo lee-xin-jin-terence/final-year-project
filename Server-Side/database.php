@@ -1,0 +1,20 @@
+<?php
+
+error_reporting(E_ALL);
+
+function connect_to_database()
+{
+    $host = "localhost";
+    $dbuser = "admin";
+    $dbpass = "admin";
+    $dbase = "apiary_management_system";
+
+    // connect to the database
+    $db_connection = mysqli_connect($host, $dbuser, $dbpass, $dbase);
+
+    return $db_connection;
+}
+
+
+
+?>
