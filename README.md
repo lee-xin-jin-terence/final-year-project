@@ -10,6 +10,9 @@
 ## Team Charter
 [FYP_Team_Charter.pdf](https://github.com/user-attachments/files/20026402/FT06_Team_Charter.pdf)
 
+## Presentation Slides
+[FYP-presentation-slides.pdf](https://github.com/user-attachments/files/20026421/FYP-presentation-slides.pdf)
+
 
 ## Promotional Video
 https://youtu.be/Y8zi7h8VXGk
