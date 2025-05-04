@@ -1,7 +1,7 @@
 # final-year-project
 
 ## Project Management Plan
-[FT06_Project_Management_Plan.pdf](https://github.com/user-attachments/files/20026395/FT06_Project_Management_Plan.pdf)
+[FYP Project_Management_Plan.pdf](https://github.com/user-attachments/files/20026395/FT06_Project_Management_Plan.pdf)
 
 
 
