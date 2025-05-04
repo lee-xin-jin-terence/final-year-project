@@ -28,6 +28,14 @@ The system promotes **traceability**, **biosecurity**, and **standardised hygien
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Front End:** React.js, HTML, CSS, JavaScript  
+- **Back End:** PHP (JSON API Server)  
+- **Database:** MySQL  
+
+---
+
 ## 📂 Project Deliverables
 
 ### 📌 Project Management Plan
