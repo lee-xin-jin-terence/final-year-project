@@ -3,7 +3,12 @@
 # Final Year Project – Apiary Management System
 
 ### 👨‍💻 Authors
-**Terence Lee Xin Jin**, **Lim Wen Xian, Kevin**, **Hoon Wei Xiong**, **Koh Yi Zheng**, **Cai JianBo** and **Nicholas Goh**
+**Terence Lee Xin Jin** – Team Leader, Developer <br/>
+**Lim Wen Xian, Kevin**<br/>
+**Hoon Wei Xiong**<br/>
+**Koh Yi Zheng**<br/>
+**Cai JianBo**<br/>
+**Nicholas Goh**
 
 ---
 
