@@ -108,10 +108,7 @@
 
 
 
-    // $server_reply["results"]["dateHarvested"] =  $firstRow['Date'];
-    // $server_reply["results"]["volumeHarvested"] =  $firstRow['VolumeHarvested'];
-    // $server_reply["results"]["hiveId"] =  $firstRow['HoneyHiveId'];
-    // $hive_id = $firstRow['HoneyHiveId'];
+
     /*----------------------FLOWER----------------------------------*/
 
 
