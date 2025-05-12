@@ -7,20 +7,20 @@
 
     $client_json_obj = json_decode($client_request_data, true);
 
-	$honeyHiveId = $client_json_obj["honeyHiveId"];
+    $honeyHiveId = $client_json_obj["honeyHiveId"];
     $apiaristId = $client_json_obj["apiaristId"];
     $inspectionActualDate = $client_json_obj["inspectionDate"];
-	$description = $client_json_obj["description"];
+    $description = $client_json_obj["description"];
     $weatherCondition = $client_json_obj["weatherCondition"];
     $inspectionOutcome = $client_json_obj["inspectionOutcome"];
 
     $db_connection = connect_to_database();
 
-	$escHoneyHiveId = mysqli_real_escape_string($db_connection , $honeyHiveId);
-	$escApiaristId = mysqli_real_escape_string($db_connection , $apiaristId);
+    $escHoneyHiveId = mysqli_real_escape_string($db_connection , $honeyHiveId);
+    $escApiaristId = mysqli_real_escape_string($db_connection , $apiaristId);
     $escInspectionActualDate = mysqli_real_escape_string($db_connection , $inspectionActualDate);
-	$escDescription = mysqli_real_escape_string($db_connection , $description);
-	$escWeatherCondition = mysqli_real_escape_string($db_connection , $weatherCondition);
+    $escDescription = mysqli_real_escape_string($db_connection , $description);
+    $escWeatherCondition = mysqli_real_escape_string($db_connection , $weatherCondition);
     $escInspectionOutcome = mysqli_real_escape_string($db_connection , $inspectionOutcome);
 
 
@@ -37,14 +37,14 @@
 	
                 
 	
-	$server_reply["addOutcome"] = "success";
+    $server_reply["addOutcome"] = "success";
     
 	
 
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Headers: *");
 
-	echo json_encode($server_reply);
+    echo json_encode($server_reply);
 
     
     function getInspectionDueDate($escHoneyHiveId, $server_reply,$db_connection)
