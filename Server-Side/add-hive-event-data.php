@@ -4,6 +4,9 @@
 
     /*
     	Allow for users to add hive event data
+
+      	Author: Terence Lee Xin Jin	
+       		Hoon Wei Xiong
     */
     $client_request_data = file_get_contents('php://input');
 
