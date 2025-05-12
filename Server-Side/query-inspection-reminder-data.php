@@ -155,7 +155,7 @@
 									
 		$queryResult = mysqli_query($dbConnection, $queryString);
 		
-        $serverReply["upcomingDueInspections"] = array();
+        	$serverReply["upcomingDueInspections"] = array();
 		$index = 0;
 		
 		while ($currentRow = mysqli_fetch_assoc($queryResult))
