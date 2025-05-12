@@ -28,14 +28,13 @@
 
      //get the harvest date and volume of honey harvested
      $queryHiveEvent = "SELECT EventId, EventType, Description, 
-            DATE_FORMAT(Date, '%d/%m/%Y')  AS Date,
-     WeatherCondition, ApiaristId, HoneyHiveId
+            DATE_FORMAT(Date, '%d/%m/%Y')  AS Date, WeatherCondition, ApiaristId, HoneyHiveId
          FROM HIVE_EVENT WHERE HoneyHiveId = '$escHiveId'
          AND YEAR(Date) = $escTargetYear
          AND MONTH(Date) >= $escStartMonth
          AND MONTH(Date) <= $escEndMonth
 
-     ORDER BY Date;";
+     	ORDER BY Date;";
 
      // "SELECT * FROM Products where productName like '{$criteria}' or price like '{$criteria}' or category like '{$criteria}' or description like '{$criteria}'"
 
