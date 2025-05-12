@@ -9,37 +9,37 @@
                 a hive
     */
 
-	error_reporting(E_ALL);
+    error_reporting(E_ALL);
     require('./database.php');
 
-	$dbConnection = connect_to_database();
+    $dbConnection = connect_to_database();
 
     $clientRequestString = file_get_contents('php://input');
-	$clientRequestObj = json_decode($clientRequestString, true);
+    $clientRequestObj = json_decode($clientRequestString, true);
 
     $hiveId = $clientRequestObj["hiveId"];
     $targetYear = $clientRequestObj["targetYear"];
     $startMonth = $clientRequestObj["startMonth"];
-	$endMonth = $clientRequestObj["endMonth"];
+    $endMonth = $clientRequestObj["endMonth"];
 	
 	
-	$escHiveId = mysqli_real_escape_string($dbConnection , $hiveId);
+    $escHiveId = mysqli_real_escape_string($dbConnection , $hiveId);
     
     $escTargetYear = mysqli_real_escape_string($dbConnection , $targetYear);
-	$escTargetYear = intval($escTargetYear);
+    $escTargetYear = intval($escTargetYear);
 
-	$escStartMonth = mysqli_real_escape_string($dbConnection , $startMonth);
-	$escStartMonth = intval($escStartMonth);
+    $escStartMonth = mysqli_real_escape_string($dbConnection , $startMonth);
+    $escStartMonth = intval($escStartMonth);
 
-	$escEndMonth = mysqli_real_escape_string($dbConnection , $endMonth);
-	$escEndMonth = intval($escEndMonth);
+    $escEndMonth = mysqli_real_escape_string($dbConnection , $endMonth);
+    $escEndMonth = intval($escEndMonth);
 
-	$serverReply = getInspectionRecords($dbConnection, $escHiveId, $escTargetYear, $escStartMonth, $escEndMonth);
+    $serverReply = getInspectionRecords($dbConnection, $escHiveId, $escTargetYear, $escStartMonth, $escEndMonth);
 	
     header("Access-Control-Allow-Origin: *");
-   	header("Access-Control-Allow-Headers: *");
+    header("Access-Control-Allow-Headers: *");
 
-	echo json_encode($serverReply);
+    echo json_encode($serverReply);
 	
 
 	
@@ -47,7 +47,7 @@
     /*
         Brief: Query the MySQL database for inspection
     */
-	function getInspectionRecords($dbConnection, $escHiveId, $escTargetYear, $escStartMonth, $escEndMonth)
+    function getInspectionRecords($dbConnection, $escHiveId, $escTargetYear, $escStartMonth, $escEndMonth)
     {
         
         $queryString = "SELECT InspectionId, HoneyHiveId, InspectionDueDate, InspectionActualDate, Description, WeatherCondition, 
@@ -86,28 +86,28 @@
         Brief: Store the results of the MySQL query in an array for sending it
         back to the client
     */
-	function storeQueryResultsInArray($queryResult, $dbConnection)
+    function storeQueryResultsInArray($queryResult, $dbConnection)
     {
-		$resultsIndex = 0;
+	$resultsIndex = 0;
 
         $arrayToReturn = array();
 		
         while($currentRow = mysqli_fetch_assoc($queryResult))
         {
-			$arrayToReturn[$resultsIndex] = array();
-			$arrayToReturn[$resultsIndex]["inspectionId"] =  $currentRow['InspectionId'];
+	    $arrayToReturn[$resultsIndex] = array();
+	    $arrayToReturn[$resultsIndex]["inspectionId"] =  $currentRow['InspectionId'];
             $arrayToReturn[$resultsIndex]["hiveId"] =  $currentRow['HoneyHiveId'];
             $arrayToReturn[$resultsIndex]["inspectionDueDate"] =  $currentRow['InspectionDueDate'];
             $arrayToReturn[$resultsIndex]["inspectionActualDate"] =   $currentRow['InspectionActualDate'];
-			$arrayToReturn[$resultsIndex]["description"] =  $currentRow['Description'];
-			$arrayToReturn[$resultsIndex]["weatherCondition"] =  $currentRow['WeatherCondition'];
-			$arrayToReturn[$resultsIndex]["outcome"] =  $currentRow['Outcome'];
-			$arrayToReturn[$resultsIndex]["apiaristId"] =  $currentRow['ApiaristId'];
+	    $arrayToReturn[$resultsIndex]["description"] =  $currentRow['Description'];
+	    $arrayToReturn[$resultsIndex]["weatherCondition"] =  $currentRow['WeatherCondition'];
+	    $arrayToReturn[$resultsIndex]["outcome"] =  $currentRow['Outcome'];
+	    $arrayToReturn[$resultsIndex]["apiaristId"] =  $currentRow['ApiaristId'];
 
             $resultsIndex++;
         }
 
 
         return $arrayToReturn;
-	}
+    }
 ?>
