@@ -2,6 +2,9 @@
 
     /*
 	Allow for users to add transaction data
+
+ 	Authors: Terence Lee Xin Jin
+  		 Hoon Wei Xiong
     */
 
     error_reporting(E_ALL);
