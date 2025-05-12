@@ -6,7 +6,7 @@ function connect_to_database()
 {
     $host = "localhost";
     $dbuser = "admin";
-    $dbpass = "admin";
+    $dbpass = "[redacted]";
     $dbase = "apiary_management_system";
 
     // connect to the database
