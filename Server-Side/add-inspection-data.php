@@ -3,7 +3,7 @@
     require('./database.php');
 
     /*
-    	Allow for authenticated users to add inspection data
+    	Allow for users to add inspection data
 
 	Authors: Terence Lee Xin Jin			
  		 Hoon Wei Xiong
