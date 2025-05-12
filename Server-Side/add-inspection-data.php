@@ -2,6 +2,12 @@
     error_reporting(E_ALL);
     require('./database.php');
 
+    /*
+    	Allow for authenticated users to add inspection data
+
+	Authors: Terence Lee Xin Jin			
+ 		 Hoon Wei Xiong
+    */
 
     $client_request_data = file_get_contents('php://input');
 
