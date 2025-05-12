@@ -2,7 +2,10 @@
     error_reporting(E_ALL);
     require('./database.php');
 
-
+    /*
+    	Allow for users to log in to the system
+    	Authors: Terence Lee Xin Jin
+    */
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Headers: *");
 
